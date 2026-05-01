@@ -5,7 +5,7 @@
 
 https://github.com/wayne931121/-TraditionalChinese_Switch_SimplifiedChinese/releases
 
-# Code
+# Codes
 ```js
 let data;
 async function sc2tcload(filename='sc2tc.json') {
