@@ -42,11 +42,15 @@ tc2scload()
 ```py
 import json
 
-with open("tc2sc.json", "w",encoding="utf8") as f:
-    json.dump(tcdc, f,ensure_ascii=False)
+with open("tc2sc.json", "r",encoding="utf8") as f:
+    tc = "雨落下的那個夜晚，我還傻傻站在那裡";
+    tdc = json.load(f)
+    print(0,"".join([tdc[i] if (i in tdc) else i for i in tc]))
 
-with open("sc2tc.json", "w",encoding="utf8") as f:
-    json.dump(scdc, f,ensure_ascii=False)
+with open("sc2tc.json", "r",encoding="utf8") as f:
+    sc = "雨落下的那个夜晚，我还傻傻站在那里";
+    sdc = json.load(f)
+    print(1,"".join([sdc[i] if (i in sdc) else i for i in sc]))
 ```
 
 (note: utf8 save in py):`json.dump(string, file, ensure_ascii=False)`
